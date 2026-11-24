@@ -18,3 +18,9 @@ note, and can be recreated in the free
 [0700-AAM simulator](https://rasrobo.github.io/0700-aam-sim/) — no
 hardware needed. This site is generated from the tutorials in the
 LoopProof project repo; everything is open source.
+
+## Support
+
+LoopProof is free and open source. If a tutorial taught you a song
+and you'd like to support more of them:
+https://buymeacoffee.com/robodigitalis
