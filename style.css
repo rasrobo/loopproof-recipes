@@ -92,3 +92,20 @@ footer .spacer { margin-left: auto; }
   article h1 { font-size: 1.7rem; }
   body { font-size: 16px; }
 }
+
+/* --- The notes: step tabs + sheet music (notation.py) --- */
+.chordstrip { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.chip { border: 1px solid var(--amber); color: var(--amber-soft);
+  border-radius: 999px; padding: .05rem .6rem; font-weight: 600;
+  font-size: .92em; }
+.tabwrap { overflow-x: auto; margin: .4rem 0 1.1rem; }
+.tabgrid { border-collapse: collapse; font-family: ui-monospace,
+  "SF Mono", Menlo, Consolas, monospace; font-size: .82rem; }
+.tabgrid th, .tabgrid td { border: 1px solid rgba(245,240,232,.16);
+  padding: .28rem .5rem; text-align: center; white-space: nowrap; }
+.tabgrid th { color: var(--muted); font-weight: 600; }
+.tabgrid td.sus { color: var(--muted); }
+.tabgrid td.rest { color: rgba(245,240,232,.28); }
+.sheet { background: #fdfcf8; border-radius: 10px; padding: 1rem .6rem;
+  overflow-x: auto; margin: .6rem 0 1.2rem; }
+.sheet svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
