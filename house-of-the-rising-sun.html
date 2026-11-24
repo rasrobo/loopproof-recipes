@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House of the Rising Sun · LoopProof</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="index.html">Loop<em>Proof</em></a>
+  <nav>
+    <a href="index.html">Songs</a>
+    <a href="rubric.html">The Rubric</a>
+    <a href="https://rasrobo.github.io/0700-aam-sim/">Play the simulator</a>
+  </nav>
+</header>
+<main><p class="crumb"><a href="index.html">← All songs</a></p><article><div class="pagemeta"><span>📄 <a href="recipes/house-of-the-rising-sun/recipe.py">recipe.py</a> — the code that builds this song's MIDI</span><span>🎛 <a href="https://rasrobo.github.io/0700-aam-sim/">open the simulator</a> and follow along</span></div><h1>House of the Rising Sun — on the 0700-AAM</h1>
+<p>A complete, followable tutorial. Every step uses the machine's real
+controls, in order. Follow it top to bottom and you will have the song
+looping on the machine, built one part at a time — the same way the
+video of this tutorial was made.</p>
+<p>The song: <strong>House of the Rising Sun</strong>, in A minor, 6/8 feel.
+The harmony loop is eight chords, one bar each:</p>
+<p><strong>Am — C — D — F — Am — E — Am — E</strong></p>
+<hr />
+<h2>Step 0 — Plug in a keyboard</h2>
+<p>A keyboard plugs into the machine (USB / MIDI in). Whatever you play,
+the machine hears. The melodic parts below are played on the keys (or
+on the machine's pads once the keygroup is set — Step 2); the machine
+captures them into its loop.</p>
+<h2>Step 1 — Set the tempo and program the drums</h2>
+<ol>
+<li>Tap the tempo in on <strong>TAP TEMPO</strong> — a slow, swaying pulse
+   (the song sits around a dotted-quarter beat of ~56).</li>
+<li>Open the <strong>step sequencer</strong> and click in the drum pattern:
+   - <strong>Kick</strong> on steps 1 and 9
+   - <strong>Snare</strong> on steps 5 and 13
+   - <strong>Hats</strong> on every even step</li>
+<li>Press <strong>PLAY</strong>. The drums loop. This loop is the spine of the song —
+   everything else is played over it, one part at a time.</li>
+</ol>
+<h2>Step 2 — Make the pads a keyboard (16 LEVEL keygroup)</h2>
+<ol>
+<li>Strike the <strong>melodic pad</strong> (pad 9) once so the machine knows the sound.</li>
+<li>Press <strong>16 LEVEL</strong>. All sixteen pads now play that one sound at
+   different pitches, like a keyboard: the source pitch sits on pad 5,
+   and the pads run chromatically from there.
+   On this keygroup, a note's pad is: <strong>pad = note − 56</strong>
+   (A3 is pad 1, C4 is pad 4, E4 is pad 8, A4 is pad 13, C5 is pad 16).</li>
+</ol>
+<h2>Step 3 — Capture the chords (OVERDUB)</h2>
+<ol>
+<li>With the drums playing, press <strong>OVERDUB</strong>. Its light comes on.
+   <strong>With OVERDUB lit, every note you play is written into the loop</strong> —
+   the machine captures the performance. (REC works the same way;
+   OVERDUB is the one you use once something is already looping.)</li>
+<li>Play one chord per bar, as block triads, in time with the loop:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Bar</th>
+<th>Chord</th>
+<th>Notes</th>
+<th>Pads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Am</td>
+<td>A3 C4 E4</td>
+<td>1 · 4 · 8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>C</td>
+<td>C4 E4 G4</td>
+<td>4 · 8 · 11</td>
+</tr>
+<tr>
+<td>3</td>
+<td>D</td>
+<td>D4 F#4 A4</td>
+<td>6 · 10 · 13</td>
+</tr>
+<tr>
+<td>4</td>
+<td>F</td>
+<td>A3 C4 F4</td>
+<td>1 · 4 · 9</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Am</td>
+<td>A3 C4 E4</td>
+<td>1 · 4 · 8</td>
+</tr>
+<tr>
+<td>6</td>
+<td>E</td>
+<td>B3 E4 G#4</td>
+<td>3 · 8 · 12</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Am</td>
+<td>A3 C4 E4</td>
+<td>1 · 4 · 8</td>
+</tr>
+<tr>
+<td>8</td>
+<td>E</td>
+<td>B3 E4 G#4</td>
+<td>3 · 8 · 12</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>When the loop comes around, your chords are playing back — the
+   machine took them. Hands off; let it loop once through.</li>
+</ol>
+<h2>Step 4 — Capture the bass</h2>
+<ol>
+<li>Switch the keygroup to the <strong>bass pad</strong> (pad 13): strike it, press
+   <strong>16 LEVEL</strong>. On this keygroup, <strong>pad = note − 37</strong>
+   (E2 is pad 3, F2 pad 4, A2 pad 8, C3 pad 11, D3 pad 13).</li>
+<li>OVERDUB still lit, play one root per bar on the first beat, and the
+   fifth of the chord on the second beat:</li>
+</ol>
+<p>Am → A2 (pad 8), then E3 · C → C3 (pad 11), then G3 ·
+   D → D3 (pad 13), then A3 · F → F2 (pad 4), then C3 ·
+   Am → A2, E3 · E → E2 (pad 3), then B2 ·
+   Am → A2, E3 · E → E2, B2</p>
+<ol start="3">
+<li>The loop now carries drums, chords and bass.</li>
+</ol>
+<h2>Step 5 — Capture the picking (the 6/8 arpeggio)</h2>
+<ol>
+<li>Back on the melodic keygroup (strike pad 9, <strong>16 LEVEL</strong>).</li>
+<li>For each chord, roll the figure <strong>root – third – fifth – high root –
+   fifth – third</strong>, six even strokes per bar. For the D chord, where the
+   high root sits above the pads, repeat the fifth instead.</li>
+</ol>
+<p>Am: 57 60 64 69 64 60 · C: 60 64 67 72 67 64 ·
+   D: 62 66 69 69 69 66 · F: 57 60 65 69 65 60 ·
+   Am: 57 60 64 69 64 60 · E: 59 64 68 71 68 64 ·
+   Am: 57 60 64 69 64 60 · E: 59 64 68 71 68 64
+   (numbers are the notes; pads are note − 56)</p>
+<ol start="3">
+<li>This rolling figure is the heartbeat of the song. Once the loop
+   closes, it plays itself.</li>
+</ol>
+<h2>Step 6 — Capture the melody</h2>
+<p>OVERDUB still lit, play the line once, over the top:</p>
+<p>E4 (pickup) | A4 – B4 | C5 – E5 | D5 – A4 | C5 – E5 |
+A4 (held) | E4 (held) | A4 (whole bar) | E4 (whole bar)</p>
+<h2>Step 7 — Let it play, then end it</h2>
+<p>Let the full loop run — drums, chords, bass, picking and melody, every
+part played in by hand and captured by the machine. To finish, let the
+last loop play out and strike a final A minor chord
+(A2 + A3 C4 E4 A4) and let it ring.</p>
+<hr />
+<p><em>Every part in this song was played in live, one layer at a time, and
+looped on this machine. Simulator: https://rasrobo.github.io/0700-aam-sim/
+— an independent simulator; not affiliated with Music Tribe / Behringer.</em></p></article></main>
+<footer>
+  <span>LoopProof — the song is the proof. Everything here is open source.</span>
+  <span class="spacer">Built on the free <a href="https://rasrobo.github.io/0700-aam-sim/">0700-AAM simulator</a> of the Behringer Kick.</span>
+</footer>
+</body>
+</html>

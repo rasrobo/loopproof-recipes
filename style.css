@@ -1,0 +1,94 @@
+:root {
+  --ink: #0b0e17;
+  --panel: #12172a;
+  --panel-2: #171d33;
+  --paper: #ece7db;
+  --muted: #a49e8f;
+  --amber: #f5a83d;
+  --amber-soft: #ffcf87;
+  --line: #2a3050;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+a { color: var(--amber-soft); text-decoration-color: rgba(245,168,61,.45); text-underline-offset: 3px; }
+a:hover { color: var(--amber); }
+.topbar {
+  display: flex; align-items: baseline; gap: 1.4rem; flex-wrap: wrap;
+  padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--line);
+  max-width: 72rem; margin: 0 auto;
+}
+.wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem; font-weight: 700; letter-spacing: .01em;
+  color: var(--paper); text-decoration: none;
+}
+.wordmark em { color: var(--amber); font-style: normal; }
+.topbar nav { display: flex; gap: 1.1rem; margin-left: auto; font-size: .95rem; }
+.topbar nav a { color: var(--muted); text-decoration: none; }
+.topbar nav a:hover { color: var(--amber-soft); }
+main { max-width: 46rem; margin: 0 auto; padding: 2.2rem 1.5rem 3rem; }
+main.wide { max-width: 72rem; }
+.hero { text-align: left; padding: 2.6rem 0 1.4rem; }
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.9rem; line-height: 1.12; margin: 0 0 1rem; font-weight: 700;
+}
+.hero h1 .accent { color: var(--amber); }
+.hero p { font-size: 1.13rem; color: var(--paper); max-width: 38rem; }
+.hero .fine { color: var(--muted); font-size: .98rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; margin: 2rem 0; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 1.3rem 1.4rem 1.15rem; transition: border-color .15s ease, transform .15s ease;
+}
+.card:hover { border-color: var(--amber); transform: translateY(-2px); }
+.card h3 { font-family: Georgia, serif; font-size: 1.3rem; margin: 0 0 .5rem; }
+.card h3 a { color: var(--paper); text-decoration: none; }
+.card h3 a:hover { color: var(--amber-soft); }
+.card p { color: var(--muted); font-size: .97rem; margin: 0 0 .9rem; }
+.card .links { font-size: .92rem; display: flex; gap: 1rem; }
+article h1 { font-family: Georgia, serif; font-size: 2.15rem; line-height: 1.2; margin: .4rem 0 1.2rem; }
+article h2 { font-family: Georgia, serif; font-size: 1.45rem; margin: 2.1rem 0 .7rem; color: var(--amber-soft); }
+article h3 { font-size: 1.12rem; margin: 1.6rem 0 .5rem; }
+article p, article li { color: var(--paper); }
+article li { margin: .3rem 0; }
+article strong { color: #fff; }
+article code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: .88em; background: var(--panel-2); padding: .12em .38em; border-radius: 6px;
+}
+article pre {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 1rem 1.1rem; overflow-x: auto;
+}
+article pre code { background: none; padding: 0; }
+article table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: .95rem; }
+article th, article td { border: 1px solid var(--line); padding: .5rem .7rem; text-align: left; }
+article th { background: var(--panel-2); color: var(--amber-soft); }
+article blockquote { border-left: 3px solid var(--amber); margin: 1.2rem 0; padding: .2rem 0 .2rem 1rem; color: var(--muted); }
+.crumb { font-size: .92rem; color: var(--muted); margin-bottom: .6rem; }
+.crumb a { color: var(--muted); }
+.pagemeta {
+  display: flex; gap: 1rem; flex-wrap: wrap; margin: 0 0 1.6rem;
+  padding: .8rem 1rem; background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  font-size: .93rem;
+}
+footer {
+  border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem;
+  max-width: 72rem; margin: 0 auto; padding: 1.4rem 1.5rem 2.4rem;
+  display: flex; gap: 1.4rem; flex-wrap: wrap;
+}
+footer .spacer { margin-left: auto; }
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.1rem; }
+  article h1 { font-size: 1.7rem; }
+  body { font-size: 16px; }
+}

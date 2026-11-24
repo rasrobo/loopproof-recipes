@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Für Elise · LoopProof</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="index.html">Loop<em>Proof</em></a>
+  <nav>
+    <a href="index.html">Songs</a>
+    <a href="rubric.html">The Rubric</a>
+    <a href="https://rasrobo.github.io/0700-aam-sim/">Play the simulator</a>
+  </nav>
+</header>
+<main><p class="crumb"><a href="index.html">← All songs</a></p><article><div class="pagemeta"><span>📄 <a href="recipes/fur-elise/recipe.py">recipe.py</a> — the code that builds this song's MIDI</span><span>🎛 <a href="https://rasrobo.github.io/0700-aam-sim/">open the simulator</a> and follow along</span></div><h1>Für Elise — Looping Tutorial (v2, from a verified score)</h1>
+<p>Ludwig van Beethoven, <em>Für Elise</em> (Bagatelle in A minor, WoO 59) —
+public domain. We loop the famous opening strain: <strong>16 bars of 3/8
+(48 eighth-note steps) in A minor</strong>, played in live, one layer at a
+time, on the Behringer Kick (0700-AAM) simulator.</p>
+<p><strong>Source — verified, not from memory.</strong> Every pitch, duration and
+sustain below was extracted from the Mutopia Project's engraving of
+the score (Mutopia-2015/08/18-931, typeset by Stelios Samelis, public
+domain; file <code>fuer_elise_mutopia_woo59.mid</code>, LilyPond output at
+384 ticks/beat, 3/8). Two independent downloads of the file agreed
+byte-for-byte. The recipe must pass two gates before it ships: the
+composition check (the produced MIDI is the composition, note for
+note) and the output audit (the <em>rendered sound</em> matches the expected
+pattern — notes present, sustains held, crescendo audible).</p>
+<h2>The strain, as written (step = one eighth note, 0–47)</h2>
+<p><strong>Melody</strong> (the line everyone knows):
+E5 D♯5 E5 · D♯5 E5 B4 · D5 C5 <strong>A4 held 2</strong> · <em>(figure)</em> · <strong>B4 held 2</strong>
+· <em>(figure)</em> · <strong>C5 held 2</strong> · <em>(figure)</em> — then the whole figure
+repeats — <strong>A4 held 2</strong> · <em>(figure)</em> · <strong>B4 held 2</strong> · and the close:
+C5 B4 <strong>A4 held 4</strong>.</p>
+<p>In steps: melody at 0–8 (A4 at step 8, held 2), 14 (B4, held 2),
+20 (C5, held 2), 24–32 (the repeat, A4 at 32), 38 (B4, held 2),
+42–44 (C5, B4, A4 held 4, steps 44–47).</p>
+<p><strong>The opening figure plays alone.</strong> No accompaniment enters until the
+third bar — the oscillation is solo, exactly as written.</p>
+<p><strong>Bass</strong> — the roots do <em>not</em> land on the downbeat. They answer on the
+third eighth of the held-note bars: A2 at steps 8, 20, 32, 44; E2 at
+steps 14, 38.</p>
+<p><strong>Broken chords</strong> — the figure Beethoven wrote, split across both
+hands, climbing through each chord under the held notes:
+steps 9–13: E3 A3 C4 E4 A4 · steps 15–19: E3 G♯3 E4 G♯4 B4 ·
+steps 21–23: E3 A3 E4 · steps 33–37 and 39–41 repeat the two figures ·
+steps 45–46: E3 A3 under the final held A4.</p>
+<p><strong>Harmony</strong> — A minor throughout, turning to E major under the held
+B4s (steps 14–19 and 38–43), back to A minor for the close.</p>
+<p><strong>Dynamics</strong> — the source MIDI is flat-velocity (LilyPond does not
+encode the score's dynamics), so this layer is editorial and labelled
+as such: the strain is <em>dolce</em>, the second statement swells slightly,
+and the closing descent (C5–B4–A4) carries the crescendo. The output
+audit measures that crescendo in the rendered audio. On the pads,
+play it as one gesture: even pressure through the strain, lean in
+slightly on the repeat, and <strong>press harder over the last three notes
+(C5–B4–A4)</strong>.</p>
+<p><strong>Song map — four phrases of four bars.</strong> Phrase 1 (steps 0–13): the
+solo oscillation, the held A4, and its broken-chord answer. Phrase 2
+(steps 14–23): the held B4 over E major, the held C5, their answers.
+Phrase 3 (steps 24–37): the repeat — oscillation, held A4, answer.
+Phrase 4 (steps 38–47): the held B4 over E major, then the close
+C5–B4–A4 with the crescendo. Learn it a phrase at a time; the loop
+doesn't care where you start listening.</p>
+<h2>The steps (as performed in the recording)</h2>
+<ol>
+<li><strong>Tempo + drums.</strong> The strain's pulse is one eighth note of
+   0.30 s (≈100 BPM counted in quarter notes). On the machine you tap
+   the beat the display counts: tap TAP TEMPO in time until <strong>the
+   display reads 44–46 BPM</strong> — the display counts the tapped beat
+   while the grid step carries the eighth note, so it reads about
+   half. Anywhere in 44–46 is right; the loop is the same. Then
+   program the drums in the step sequencer (GRID view): kick on the
+   four beats, snare on the off-beats, hats on every other step.
+   <em>Checkpoint: the display reads 44–46 BPM, and the step grid shows
+   the pattern lit in orange — kick ×4, snare ×2, hats filling every
+   other step.</em></li>
+<li><strong>Keygroup.</strong> Strike the melodic source pad, press 16 LEVEL — the
+   pads become a keyboard spanning the tune's range.
+   <em>Checkpoint: 16 LEVEL is lit and the display shows BANK A
+   (Pads 1–16) — the pads now play one sound at sixteen pitches.</em></li>
+<li><strong>OVERDUB + chords.</strong> Press PLAY, light OVERDUB — every note played
+   now is written into the loop. Play one triad per bar: A minor,
+   turning to E under the held notes.
+   <em>Checkpoint: OVERDUB stays lit, the BAR counter cycles, and after
+   the first cycle the chords come back around on their own.</em>
+   Good to know: the machine writes each strike into the step that is
+   playing when the pad is hit — timing inside a step doesn't matter,
+   but a strike that lands in the neighbouring step is written there.
+   If a note ever appears one step off, that's why.</li>
+<li><strong>Bass.</strong> Still overdubbing: the roots on their written steps —
+   low A, low E — held underneath.
+   <em>Checkpoint: one low root per held-note bar, landing on the third
+   eighth — you hear it answer under the chord, not on the downbeat.</em></li>
+<li><strong>Broken chords.</strong> The climbing figure, low to high, exactly as
+   written above.
+   <em>Checkpoint: every held-note bar now carries its climbing answer
+   figure, and the loop holds drums, chords, bass and figures
+   together.</em></li>
+<li><strong>Melody.</strong> Switch to the lead source and play the tune over the
+   top — figure, held notes, the repeat, and the swelling close.
+   <em>Checkpoint: the tune sits clearly on top in the flute voice — the
+   held A, B and C ring their full length, and the last three notes
+   swell.</em></li>
+<li><strong>Full loop.</strong> Stop the capture; the finished strain loops. One
+   final A-minor sonority ends the performance.
+   <em>Checkpoint: STOP is lit, OVERDUB is off, and the finished strain
+   loops cleanly from bar 1.</em></li>
+</ol>
+<h2>Files</h2>
+<ul>
+<li><code>recipe.py</code> — builds the song's MIDI from the tables above
+  (deterministic; each layer on its own channel; melody on a flute
+  lead, GM 73, so it sings over the accompaniment).</li>
+<li><code>spec.json</code> — the composition the produced MIDI must match.</li>
+<li>Render: SpessaSynth + TimGM6mb soundfont (see the repo README).</li>
+</ul></article></main>
+<footer>
+  <span>LoopProof — the song is the proof. Everything here is open source.</span>
+  <span class="spacer">Built on the free <a href="https://rasrobo.github.io/0700-aam-sim/">0700-AAM simulator</a> of the Behringer Kick.</span>
+</footer>
+</body>
+</html>

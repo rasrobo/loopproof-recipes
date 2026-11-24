@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canon in D · LoopProof</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="index.html">Loop<em>Proof</em></a>
+  <nav>
+    <a href="index.html">Songs</a>
+    <a href="rubric.html">The Rubric</a>
+    <a href="https://rasrobo.github.io/0700-aam-sim/">Play the simulator</a>
+  </nav>
+</header>
+<main><p class="crumb"><a href="index.html">← All songs</a></p><article><div class="pagemeta"><span>📄 <a href="recipes/canon-in-d/recipe.py">recipe.py</a> — the code that builds this song's MIDI</span><span>🎛 <a href="https://rasrobo.github.io/0700-aam-sim/">open the simulator</a> and follow along</span></div><h1>Canon in D — on the 0700-AAM</h1>
+<p>A complete, followable tutorial. Every step uses the machine's real
+controls, in order. Follow it top to bottom and Canon in D will be
+looping on the machine, built one part at a time.</p>
+<p>The harmony loop is eight chords, one every two steps of the 16-step
+loop:</p>
+<p><strong>D — A — Bm — F#m — G — D — G — A</strong></p>
+<hr />
+<h2>Step 0 — Plug in a keyboard</h2>
+<p>A keyboard plugs into the machine (USB / MIDI in). The melodic parts
+below are played on the keys (or on the pads once the keygroup is set —
+Step 2); the machine captures them into its loop.</p>
+<h2>Step 1 — Set the tempo and program the drums</h2>
+<ol>
+<li>Tap the tempo in on <strong>TAP TEMPO</strong> — slow and stately, about 53 BPM.</li>
+<li>Open the <strong>step sequencer</strong> and click in the drums:
+   - <strong>Kick</strong> on steps 1, 5, 9, 13
+   - <strong>Snare</strong> on steps 5 and 13
+   - <strong>Hats</strong> on every odd step</li>
+<li>Press <strong>PLAY</strong>. The drums loop — the spine everything else hangs on.</li>
+</ol>
+<h2>Step 2 — Make the pads a keyboard (16 LEVEL keygroup)</h2>
+<ol>
+<li>Strike the <strong>melodic pad</strong> (pad 9), then press <strong>16 LEVEL</strong>. All
+   sixteen pads now play that sound chromatically, source pitch on
+   pad 5. On this keygroup: <strong>pad = note − 56</strong>.</li>
+<li>For the bass later: strike the <strong>bass pad</strong> (pad 13) + <strong>16 LEVEL</strong>.
+   On that keygroup: <strong>pad = note − 37</strong>.</li>
+</ol>
+<h2>Step 3 — Capture the chords (OVERDUB)</h2>
+<ol>
+<li>Drums playing, press <strong>OVERDUB</strong> — its light comes on. <strong>With
+   OVERDUB lit, every note you play is written into the loop.</strong></li>
+<li>One triad per chord slot (each chord lasts two steps):</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Chord</th>
+<th>Notes</th>
+<th>Pads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D</td>
+<td>D4 F#4 A4</td>
+<td>6 · 10 · 13</td>
+</tr>
+<tr>
+<td>A</td>
+<td>A3 C#4 E4</td>
+<td>1 · 5 · 8</td>
+</tr>
+<tr>
+<td>Bm</td>
+<td>B3 D4 F#4</td>
+<td>3 · 6 · 10</td>
+</tr>
+<tr>
+<td>F#m</td>
+<td>A3 C#4 F#4</td>
+<td>1 · 5 · 10</td>
+</tr>
+<tr>
+<td>G</td>
+<td>B3 D4 G4</td>
+<td>3 · 6 · 11</td>
+</tr>
+<tr>
+<td>D</td>
+<td>D4 F#4 A4</td>
+<td>6 · 10 · 13</td>
+</tr>
+<tr>
+<td>G</td>
+<td>B3 D4 G4</td>
+<td>3 · 6 · 11</td>
+</tr>
+<tr>
+<td>A</td>
+<td>A3 C#4 E4</td>
+<td>1 · 5 · 8</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>The loop comes around playing your chords back. Hands off.</li>
+</ol>
+<h2>Step 4 — Capture the bass</h2>
+<p>Bass keygroup (pad 13 + 16 LEVEL), OVERDUB still lit — one root per
+chord, on the first step of its slot:</p>
+<p>D3 (pad 13) · A2 (pad 8) · B2 (pad 10) · F#2 (pad 5) ·
+G2 (pad 6) · D3 (pad 13) · G2 (pad 6) · A2 (pad 8)</p>
+<h2>Step 5 — Capture the sparkle (arpeggio pings)</h2>
+<p>Melodic keygroup again. On the <strong>second</strong> step of each chord slot,
+strike the chord's top note once:</p>
+<p>A4 (13) · E4 (8) · F#4 (10) · F#4 (10) · G4 (11) · A4 (13) · G4 (11) · E4 (8)</p>
+<h2>Step 6 — Let it play, then end it</h2>
+<p>Let the full loop run — drums, chords, bass and sparkle, every part
+played in by hand. To finish: stop the loop and strike a final D chord
+(D3 in the bass + D4 F#4 A4 on the melodic pads) and let it ring.</p>
+<hr />
+<p><em>Every part in this song was played in live, one layer at a time, and
+looped on this machine. Simulator: https://rasrobo.github.io/0700-aam-sim/
+— an independent simulator; not affiliated with Music Tribe / Behringer.</em></p></article></main>
+<footer>
+  <span>LoopProof — the song is the proof. Everything here is open source.</span>
+  <span class="spacer">Built on the free <a href="https://rasrobo.github.io/0700-aam-sim/">0700-AAM simulator</a> of the Behringer Kick.</span>
+</footer>
+</body>
+</html>

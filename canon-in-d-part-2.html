@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canon in D, Part 2 — The Melody · LoopProof</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="index.html">Loop<em>Proof</em></a>
+  <nav>
+    <a href="index.html">Songs</a>
+    <a href="rubric.html">The Rubric</a>
+    <a href="https://rasrobo.github.io/0700-aam-sim/">Play the simulator</a>
+  </nav>
+</header>
+<main><p class="crumb"><a href="index.html">← All songs</a></p><article><div class="pagemeta"><span>📄 <a href="recipes/canon-in-d-part-2/recipe.py">recipe.py</a> — the code that builds this song's MIDI</span><span>🎛 <a href="https://rasrobo.github.io/0700-aam-sim/">open the simulator</a> and follow along</span></div><h1>Canon in D, Part 2 — The Melody — on the 0700-AAM</h1>
+<p>Part 1 built the loop: drums, chords, bass and sparkle — the Canon
+accompaniment, played in live one layer at a time. But the loop so far
+is only the accompaniment. Part 2 adds the part everyone hums: <strong>the
+melody</strong>, played in over the top of the Part 1 loop while it runs.</p>
+<p>Follow this after Part 1, with the Part 1 loop playing.</p>
+<p>The harmony underneath never changes — eight chords, one every two
+steps of the 16-step loop:</p>
+<p><strong>D — A — Bm — F#m — G — D — G — A</strong></p>
+<hr />
+<h2>Step 0 — Start from the Part 1 loop</h2>
+<ol>
+<li>Build the Part 1 loop first (see the Part 1 tutorial): tempo tapped
+   in at about 45 BPM, drums programmed in the step sequencer, chords
+   captured with OVERDUB, then the bass, then the arpeggio pings.</li>
+<li>Press <strong>PLAY</strong> and let the accompaniment loop run. Everything in
+   Part 2 is played in over this loop, while it plays.</li>
+</ol>
+<h2>Step 1 — Make the pads a melody keyboard (16 LEVEL keygroup)</h2>
+<p>The melody sits higher than the chord keygroup reaches, so it gets
+its own keygroup:</p>
+<ol>
+<li>With OVERDUB off, strike <strong>pad 7</strong> (the G♯4 hook pad), then press
+   <strong>16 LEVEL</strong>. All sixteen pads now play that sound chromatically,
+   source pitch (G♯4) on pad 5. This is the only keygroup on the
+   machine that reaches from E4 all the way up to F♯5.</li>
+<li>On this keygroup the pads span E4 to G5, and the math is:
+   <strong>pad number = note − 63</strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Note</th>
+<th>MIDI</th>
+<th>Pad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E4</td>
+<td>64</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F♯4</td>
+<td>66</td>
+<td>3</td>
+</tr>
+<tr>
+<td>G4</td>
+<td>67</td>
+<td>4</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>69</td>
+<td>6</td>
+</tr>
+<tr>
+<td>B4</td>
+<td>71</td>
+<td>8</td>
+</tr>
+<tr>
+<td>C♯5</td>
+<td>73</td>
+<td>10</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>74</td>
+<td>11</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>76</td>
+<td>13</td>
+</tr>
+<tr>
+<td>F♯5</td>
+<td>78</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<h2>Step 2 — Capture phrase 1 (OVERDUB)</h2>
+<ol>
+<li>Accompaniment playing, press <strong>OVERDUB</strong> — its light comes on.
+   <strong>With OVERDUB lit, every note you play is written into the loop.</strong></li>
+<li>Phrase 1 is long, singing notes — each one lasts <strong>4 steps</strong>.
+   Play one note on steps 1, 5, 9 and 13 of the cycle. The phrase
+   takes <strong>two full cycles</strong>:</li>
+</ol>
+<p><strong>Cycle A</strong> (over D · A · Bm · F♯m):</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Note</th>
+<th>Pad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>F♯5</td>
+<td>15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>E5</td>
+<td>13</td>
+</tr>
+<tr>
+<td>9</td>
+<td>D5</td>
+<td>11</td>
+</tr>
+<tr>
+<td>13</td>
+<td>C♯5</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cycle B</strong> (over G · D · G · A):</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Note</th>
+<th>Pad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>B4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A4</td>
+<td>6</td>
+</tr>
+<tr>
+<td>9</td>
+<td>B4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>13</td>
+<td>C♯5</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>The loop comes around playing phrase 1 back over the
+   accompaniment. Keep OVERDUB lit — phrase 2 goes into the next
+   cycles of the same loop.</li>
+</ol>
+<h2>Step 3 — Capture phrase 2 (OVERDUB still lit)</h2>
+<p>Phrase 2 moves twice as fast — quarter notes, each lasting
+<strong>2 steps</strong>. Play one note on steps 1, 5, 9 and 13, over the next
+<strong>two cycles</strong>:</p>
+<p><strong>Cycle C:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Note</th>
+<th>Pad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>D5</td>
+<td>11</td>
+</tr>
+<tr>
+<td>5</td>
+<td>C♯5</td>
+<td>10</td>
+</tr>
+<tr>
+<td>9</td>
+<td>B4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>13</td>
+<td>A4</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cycle D:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Note</th>
+<th>Pad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>G4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>F♯4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>9</td>
+<td>G4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>13</td>
+<td>E4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2>Step 4 — Let it play, then end it</h2>
+<p>Let the full loop run — drums, chords, bass and sparkle from Part 1,
+with the melody riding on top, every part played in by hand. To
+finish: stop the loop and strike a final D chord (D3 in the bass +
+D4 F♯4 A4 on the melodic pads) and let it ring.</p>
+<p>The Canon is complete: accompaniment and melody together, built
+entirely by looping.</p>
+<hr />
+<p><em>Every part in this song was played in live, one layer at a time, and
+looped on this machine. Simulator: https://rasrobo.github.io/0700-aam-sim/
+— an independent simulator; not affiliated with Music Tribe / Behringer.</em></p></article></main>
+<footer>
+  <span>LoopProof — the song is the proof. Everything here is open source.</span>
+  <span class="spacer">Built on the free <a href="https://rasrobo.github.io/0700-aam-sim/">0700-AAM simulator</a> of the Behringer Kick.</span>
+</footer>
+</body>
+</html>

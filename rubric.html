@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Rubric · LoopProof</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="index.html">Loop<em>Proof</em></a>
+  <nav>
+    <a href="index.html">Songs</a>
+    <a href="rubric.html">The Rubric</a>
+    <a href="https://rasrobo.github.io/0700-aam-sim/">Play the simulator</a>
+  </nav>
+</header>
+<main><p class="crumb"><a href="index.html">← All songs</a></p><article><h1>LoopProof — Layer &amp; Separation Rubric</h1>
+<p>The rules every LoopProof arrangement is built and checked against.
+Written 2026-11-23, after the Canon Part 2 melody-inaudibility fix and
+the Für Elise audit. A song that fails a measurable rule here does not
+ship until the rule passes or the deviation is justified in writing in
+the song's tutorial.</p>
+<h2>Layer order</h2>
+<p>Default recording order: <strong>drums (programmed) → bass → chords/figures →
+melody last.</strong> Melody is always last and always on its own channel and
+its own lead voice.</p>
+<p>Justified deviation (Für Elise): chords before bass — the bass roots
+answer the held chords on the third eighth, so the harmony is the frame
+the bass hangs on. The deviation and its reason are stated in the
+tutorial.</p>
+<h2>Per-layer assignment</h2>
+<p>Every layer gets a register band, a timbre family, and a rhythmic role
+before anything is recorded. Für Elise (worked example):</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Register</th>
+<th>Timbre</th>
+<th>Rhythmic role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drums</td>
+<td>—</td>
+<td>kit (kick/snare/hat)</td>
+<td>the pulse: beats, off-beats, every other step</td>
+</tr>
+<tr>
+<td>Chords</td>
+<td>mid (triads around C4)</td>
+<td>piano</td>
+<td>one triad per bar — the harmonic frame</td>
+</tr>
+<tr>
+<td>Bass</td>
+<td>low (A2/E2)</td>
+<td>bass keygroup</td>
+<td>one root per held-note bar, on the third eighth</td>
+</tr>
+<tr>
+<td>Broken chords</td>
+<td>low→high climb (E3–B4)</td>
+<td>piano</td>
+<td>the written answer figure under each held note</td>
+</tr>
+<tr>
+<td>Melody</td>
+<td>high (A4–E5)</td>
+<td><strong>flute lead (GM 73)</strong></td>
+<td>the line itself: figure, held notes, close</td>
+</tr>
+</tbody>
+</table>
+<h2>Separation gate (measurable)</h2>
+<p>The lead layer must be audibly above the accompaniment <strong>in its own
+pitch band</strong>, measured on the rendered audio with the output audit's
+method: for each lead note, band RMS in the note's head window vs the
+median of same-band control windows at other times (excluding windows
+where the same pitch sounds).</p>
+<ul>
+<li><strong>Pass: every lead note ≥ +6 dB</strong> (presence ratio ≥ 2.0), and the
+  median ≥ +10 dB.</li>
+<li>Für Elise, measured 2026-11-23: median <strong>+18.3 dB</strong>, p10 +13.9 dB,
+  min +8.6 dB — PASS.</li>
+<li>A lead layer rendered in the same voice as its accompaniment at a
+  similar level fails this in practice even when the notes are
+  correct (Canon Part 2, 2026-11-23: present but inaudible). Give the
+  melody a distinct timbre and a velocity lift (~105–112) by default.</li>
+</ul>
+<h2>Timing &amp; capture facts (simulator)</h2>
+<ul>
+<li>The simulator writes each pad strike into the step that is playing
+  when the pad is hit (<code>state.currentStep</code>). Timing inside a step does
+  not matter; a strike in the neighbouring step is written there.
+  There is no sub-step drift to correct.</li>
+<li>Passes start on the loop boundary (step 0). The performance's strike
+  log is the ground truth for the strike-completeness gate: every
+  strike of every pass must fall inside the video segment that shows
+  that pass.</li>
+<li>Tempo is stated in tutorials in <strong>display terms</strong> (what the
+  machine's display reads while tapping) with a tolerance window, plus
+  the musical tempo it corresponds to.</li>
+</ul>
+<h2>Dynamics</h2>
+<ul>
+<li>Source dynamics are used when the verified source encodes them.
+  When it doesn't (flat-velocity sources), the dynamics layer is
+  editorial, is labelled as such in the tutorial, and is taught as a
+  physical gesture a learner can reproduce ("press harder over the
+  last three notes"), never only as numbers.</li>
+<li>The output audit measures the claimed dynamics in the rendered
+  audio (e.g. closing/opening band level ≥ 1.05 for a crescendo).</li>
+</ul>
+<h2>Licensing</h2>
+<ul>
+<li>Scores: verified public-domain or licensed sources only, named in
+  the tutorial (Für Elise: Mutopia Project, public domain).</li>
+<li>Soundfont: TimGM6mb (GPL-2) — rendering with it is fine; do not
+  redistribute the bare file without its license.</li>
+</ul></article></main>
+<footer>
+  <span>LoopProof — the song is the proof. Everything here is open source.</span>
+  <span class="spacer">Built on the free <a href="https://rasrobo.github.io/0700-aam-sim/">0700-AAM simulator</a> of the Behringer Kick.</span>
+</footer>
+</body>
+</html>
