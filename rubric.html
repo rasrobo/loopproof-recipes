@@ -115,6 +115,65 @@ where the same pitch sounds).</p>
 <li>The output audit measures the claimed dynamics in the rendered
   audio (e.g. closing/opening band level ≥ 1.05 for a crescendo).</li>
 </ul>
+<h2>What "proven" means</h2>
+<p>LoopProof's claim is in the name: the song is the proof of the
+tutorial. That claim has a precise, checkable definition:</p>
+<blockquote>
+<p><strong>A song is proven when a new user, using only the video, on the
+pinned simulator commit, reproduces the reference state.</strong></p>
+</blockquote>
+<ul>
+<li>The <strong>reference state</strong> is the loop exactly as the video's
+  performance left it: the 16×16 step pattern and the pitches recorded
+  on each step, captured from the performance itself. It ships inside
+  the simulator's LEARN panel (below the device) for every tutorial
+  song.</li>
+<li><strong>Reproduces</strong> is verified with the simulator's own <strong>Check my
+  result</strong> diff: the learner builds the loop by following the video,
+  presses the button, and the simulator compares their state against
+  the reference step by step — every differing step named, with the
+  expected and actual notes. Proven means a <strong>100% step match</strong>
+  (256 of 256 cells: pattern and pitches).</li>
+<li>The LEARN panel also carries a <strong>start link for every tutorial
+  step</strong> — a link that opens the simulator with the loop in the state
+  that step starts from — and an export of the learner's own state,
+  so a result can be shared and re-checked.</li>
+<li><strong>Pinned commit:</strong> the videos disclose the simulator commit their
+  performance ran on. The learner panel and start links are live in
+  the simulator from commit <code>229048d</code>.</li>
+</ul>
+<h3>Learner pass rate</h3>
+<p>The definition above is only as good as its measurement. A learner
+test (first-time users, video only, screen-recorded) is being run for
+each tutorial; when it completes, the measured pass rate — how many
+learners reached a 100% step match unaided, and where the rest
+stopped — will be published here per video.</p>
+<table>
+<thead>
+<tr>
+<th>Video</th>
+<th>Learner pass rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canon in D — Part 1 (v5)</td>
+<td>not yet measured — learner test pending</td>
+</tr>
+<tr>
+<td>Canon in D, Part 2 — The Melody (v5)</td>
+<td>not yet measured — learner test pending</td>
+</tr>
+<tr>
+<td>House of the Rising Sun (v5)</td>
+<td>not yet measured — learner test pending</td>
+</tr>
+<tr>
+<td>Für Elise (v5)</td>
+<td>not yet measured — learner test pending</td>
+</tr>
+</tbody>
+</table>
 <h2>Licensing</h2>
 <ul>
 <li>Scores: verified public-domain or licensed sources only, named in
