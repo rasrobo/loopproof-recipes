@@ -109,3 +109,36 @@ footer .spacer { margin-left: auto; }
 .sheet { background: #fdfcf8; border-radius: 10px; padding: 1rem .6rem;
   overflow-x: auto; margin: .6rem 0 1.2rem; }
 .sheet svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+
+/* --- Note Highway (highway.py / highway.js) --- */
+.highway { margin: 0 0 2rem; }
+.hw-stage { position: relative; border: 1px solid var(--line);
+  border-radius: 14px; overflow: hidden; background: #0b0e17; }
+.hw-stage canvas { display: block; width: 100%; aspect-ratio: 16 / 9;
+  touch-action: manipulation; }
+.hw-fallback-note { position: absolute; top: .5rem; left: .6rem;
+  font-size: .8rem; color: var(--muted); }
+.hw-controls { display: flex; flex-wrap: wrap; gap: .55rem;
+  align-items: center; margin: .8rem 0 .55rem; }
+.hw-controls button, .hw-chip {
+  font: inherit; font-size: .95rem; cursor: pointer;
+  background: var(--panel-2); color: var(--paper);
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: .42rem .95rem; }
+.hw-controls button:hover, .hw-chip:hover { border-color: var(--amber); }
+.hw-controls button:focus-visible, .hw-chip:focus-visible {
+  outline: 2px solid var(--amber); outline-offset: 2px; }
+.hw-controls .hw-main { background: var(--amber); border-color: var(--amber);
+  color: #191204; font-weight: 700; }
+.hw-controls .hw-on { border-color: var(--amber); color: var(--amber-soft); }
+.hw-readout { color: var(--muted); font-size: .92rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+.hw-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.hw-chip { display: inline-flex; align-items: center; gap: .45rem; }
+.hw-chip .hw-dot { width: .72em; height: .72em; border-radius: 50%;
+  display: inline-block; }
+.hw-chip.hw-off { opacity: .42; }
+.hw-note { color: var(--muted); font-size: .88rem; }
+@media (prefers-reduced-motion: reduce) {
+  .hw-stage canvas { scroll-behavior: auto; }
+}
